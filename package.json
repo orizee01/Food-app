@@ -1,0 +1,23 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orizee01/Food-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orizee01/Food-app/issues"
+  },
+  "homepage": "https://github.com/orizee01/Food-app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
