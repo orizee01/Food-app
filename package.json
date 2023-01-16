@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node index.js",
+    "dev": "nodemon --exec babel-node -- ./index.js",
+    "test": "cross-env NODE_ENV=test mocha --require @babel/register src/test/**/ --timeout 120000 --exit"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,26 @@
   },
   "homepage": "https://github.com/orizee01/Food-app#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "bluebird": "^3.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nyc": "^15.1.0",
+    "pg-promise": "^11.0.2",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.3.7",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "install": "^0.13.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20"
   }
 }

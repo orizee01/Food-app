@@ -1,6 +1,6 @@
 # Build and Release Folders
-bin-debug/
-bin-release/
+.env/
+node_modules/
 [Oo]bj/
 [Bb]in/
 
