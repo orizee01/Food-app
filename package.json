@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js",
+    "build": "rimraf build && babel app --out-dir build",
+    "prestart": "npm run && rimraf build && babel-node . --out-dir build",
+    "start": "nodemon --exec babel-node build/index.js",
     "dev": "nodemon --exec babel-node -- ./index.js",
     "test": "cross-env NODE_ENV=test mocha --require @babel/register src/test/**/ --timeout 120000 --exit"
   },
@@ -26,6 +28,7 @@
     "morgan": "^1.10.0",
     "nyc": "^15.1.0",
     "pg-promise": "^11.0.2",
+    "rimraf": "^4.1.0",
     "winston": "^3.8.2"
   },
   "devDependencies": {
