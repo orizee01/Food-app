@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf build && babel app --out-dir build",
+    "build": "rimraf build && babel src --out-dir build",
     "prestart": "npm run && rimraf build && babel-node . --out-dir build",
     "start": "nodemon --exec babel-node build/index.js",
     "dev": "nodemon --exec babel-node -- ./index.js",

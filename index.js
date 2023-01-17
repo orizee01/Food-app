@@ -6,7 +6,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import logger from './src/logger/index.js';
 
-console.log(config, 'wertyu');
+
 const app = express();
 const port = config.PORT || 5000
 global.logger = logger;
