@@ -26,7 +26,10 @@ export const devLogger = ()=> {
       errors({ stack: true }),
       logFormat
     ),
-    transports: [new transports.Console()],
+    transports: [
+    new transports.File({
+      filename: "./server.log",
+    }),new transports.Console()],
   });
 }
 
